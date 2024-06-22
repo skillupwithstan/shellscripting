@@ -1,0 +1,9 @@
+Pipeline:
+ls -l /usr/bin | less
+ls | wc -l
+
+Pipelines, Redirection, and Appending to a File:
+
+ls > /tmp/saved-output | less
+ls -t | head -n 10 | tee /tmp/ten-last-changed-files
+ls -l | tee -a /tmp/append-files
