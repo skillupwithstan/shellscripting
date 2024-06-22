@@ -14,6 +14,29 @@ find command:
 find <search location> <criteria> <value for criteria> 
 
 find /root -name test
-find /root -type f  files
-find /root -type d  folders
-find /root -type l  links
+find /root -type f  --> for file search
+find /root -type d --> for folder search
+find /root -type l --> for links search
+
+File Permission:
+-----------------
+A file in Linux has 3 permissions: read, write and execute. Each of them has an absolute value to them. 
+
+Read(r) has 4, write(w) has 2 and execute(x) has 1. 
+For a given file, there will be an owner, group owner and other users. 
+Each of these users will have specific permission on the file. 
+If all these users have full permission on the file, it means the permission of the file is 777(7 for owner, 7 for group owner, 7 for other users). 
+7 is the sum of total of the absolute values of all three permissions (read, write and execute).
+
+To find a file based on the permission of the file, use the -perm option.
+
+The value for -perm can be specified in 2 ways.
+
+i) absolute way (777)
+ii) symbolic way(u=rwx,g=rwx,o=rwx)
+
+find / -type f -perm 755
+find / -type d -perm u=rwx
+
+chmod 777 <filename>
+chmod u=rwx filename
