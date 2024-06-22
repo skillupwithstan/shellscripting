@@ -9,3 +9,11 @@ ls > /tmp/saved-output | less
 ls -t | head -n 10 | tee /tmp/ten-last-changed-files
 ls -l | tee -a /tmp/append-files
 
+find command:
+-------------
+find <search location> <criteria> <value for criteria> 
+
+find /root -name test
+find /root -type f  files
+find /root -type d  folders
+find /root -type l  links
