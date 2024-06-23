@@ -49,3 +49,9 @@ Match all empty lines:
 grep '^$’ sample.txt
 Match all lines with content:
 grep '.’ sample.txt
+
+grep -E "^(10|11):[0-5][0-9].*Error" logfile.txt
+
+df | head -n 1 && df |head -n 6 | tail -n 2 | awk '{print $1,$5}'
+
+
