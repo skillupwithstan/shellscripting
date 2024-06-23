@@ -1,3 +1,5 @@
+
+
 To remove duplicate entries
 ---------------------------
 uniq logon.txt
@@ -27,3 +29,23 @@ To squeeze and translate: cat test.txt | tr -s ' ' ':’
 To delete a character: cat test.txt | tr -d 'i'
 To delete multiple characters: cat test.txt | tr -d 'ie'
 
+grep Command: To extract data using the keyword
+-----------------------------------------------
+Match the exact pattern: 
+grep “kumar" sample.txt
+Match pattern without case sensitivity: 
+grep -i “kumar" sample.txt
+Match lines starting with a pattern: 
+grep "^ku" sample.txt
+Matching lines ending with a pattern: 
+grep '\.$’ sample.txt
+Match an entire word: 
+grep -w “kumar" sample.txt
+Match words starting with a pattern: 
+grep -i "\<kum" sample.txt
+Match words ending with a pattern: 
+grep -i “s\>" sample.txt
+Match all empty lines: 
+grep '^$’ sample.txt
+Match all lines with content:
+grep '.’ sample.txt
