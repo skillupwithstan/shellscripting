@@ -16,4 +16,14 @@ To list the duplicate entry
 ---------------------------
 cat logon.txt | uniq –d
 
+Translate, Squeeze and Delete Characters:
+------------------------------------------
+
+Translate all lower case into upper case: cat test.txt | tr [:lower:] [:upper:]
+Translate all upper case into lower case: cat test.txt | tr [:upper:] [:lower:]
+To translate a character into another: cat test.txt | tr 'E' ‘e’
+To squeeze repeating characters: cat test.txt | tr -s ' ‘
+To squeeze and translate: cat test.txt | tr -s ' ' ':’
+To delete a character: cat test.txt | tr -d 'i'
+To delete multiple characters: cat test.txt | tr -d 'ie'
 
