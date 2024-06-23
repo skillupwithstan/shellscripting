@@ -1,0 +1,19 @@
+To remove duplicate entries
+---------------------------
+uniq logon.txt
+
+sort logon.txt  | uniq
+
+To count the repeating entries
+------------------------------
+sort logon.txt | uniq -c
+
+To list non-repeating entries
+-----------------------------
+cat logon.txt | uniq –u
+
+To list the duplicate entry
+---------------------------
+cat logon.txt | uniq –d
+
+
