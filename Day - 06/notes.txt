@@ -1,5 +1,3 @@
-
-
 To remove duplicate entries
 ---------------------------
 uniq logon.txt
