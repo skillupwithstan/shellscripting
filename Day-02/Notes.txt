@@ -1,0 +1,89 @@
+Os installation
+---------------
+
+OS  Desktop Version & Server Version
+
+Open-Source Operating System:
+*****************************
+The open-source operating system permits the use of publicly accessible, freely distributable code for commercial purposes. An open-source OS’s source code is accessible since it is an open-source application or programmed. According to their needs, the user can alter or edit those programs and create new apps. 
+
+Open-source operating systems include Linux, Open Solaris, Open BDS, Free BSD, Minix, etc.
+
+Advantages:
+----------
+Reliable: The open-source operating systems are most reliable.
+
+Cost-efficient: Most of the open-source operating systems are free and some of them are less expensive.
+
+Flexibility: We can customize it as per our requirement.
+
+Disadvantages:
+-------------
+Complicated: It is not as user-friendly as the ones that are closed. To use this software, we must have a basic understanding of technology.
+
+Risk to Safety: Even if the flaws have been found, there is still a threat of attacks because the attackers have access to the source code.
+
+Lack of support: There is no customer service accessible to help you if you encounter a problem.
+
+Commercial operating system
+***************************
+The commercial operating system is not publicly accessible, not freely distributable code for commercial purposes. 
+
+For commercial, the users need to spend moderate to expensive cost. It is available under high licensing cost. 
+
+A commercial OS’s source code is not accessible since it is a commercial or closed-source application or programmed. 
+
+According to their needs, the user can’t alter or edit those programs and create new apps.
+
+Some of the best Commercial Operating Systems:
+
+Windows OS
+Mac OS
+Unix
+Oracle
+
+Advantages:
+----------
+A single point of contact for any issues: Once paid for a piece of software, we have a real-world counterparty to deal with if a problem does occur.
+
+Clearly defined licensing and usage conditions: Commercial software for organization has the advantage of coming with a well-documented promise that you will have support behind it.
+
+A well-defined plan for the software and upgrade: Companies can avoid the costs associated with technological failures by performing timely upgrades.
+
+Disadvantages:
+--------------
+Strict guidelines for licensing: In an effort to avoid software audits, more than a quarter of companies admit to over-licensing.
+
+Exclusive source code: You won’t be able to modify the source code to for your requirements. You have to subscribe to a more costly plan to get any extra functionality.
+
+Risk of losing a software license: There’s a good possibility that the app will be idle unless it’s software 
+required for the operation of your business. Various studies suggest that between 30 and 37% of commercial software licenses owned by businesses are unused or highly overused.
+
+Installation Guide:
+-------------------
+https://ubuntu.com/download/server
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/installation_guide/chap-simple-install
+https://documentation.suse.com/sles/15-SP4/pdf/article-installation_en.pdf
+
+Help system
+------------
+
+The help command is the simplest way to get information regarding a built-in shell command. It helps you fetch information from the shell’s internal documentation.
+
+It takes a text string as the command line argument and looks for the provided string in the shell’s documents. 
+
+This saves the time spent in going through the entire documentation.
+
+
+help cd
+help pwd
+help help
+
+Man command
+-----------
+man command in Linux is used to display the user manual of any command that we can run on the terminal. 
+It provides a detailed view of the command which includes NAME, SYNOPSIS, DESCRIPTION, OPTIONS, EXIT STATUS, RETURN VALUES, ERRORS, FILES, VERSIONS, EXAMPLES, AUTHORS and SEE ALSO.
+
+man [command]
+man ls
+man cd
