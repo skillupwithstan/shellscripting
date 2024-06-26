@@ -1,1 +1,50 @@
+Introduction:
+---------------
+“Linux is basically a simple operating system, but you have to be a genius to understand its simplicity”.
+
+Linux is a critical technology for IT professionals to understand.
+Linux is in widespread use, worldwide. Internet users interact with Linux applications and web server systems daily, by browsing the World Wide Web and using e-commerce sites to buy and sell products.
+Linux is in use for much more than the internet. Linux manages point-of-sale systems and the world's stock markets, powers smart TVs and in-flight entertainment systems, and runs most of the top 500 supercomputers in the world. 
+Linux provides the core technologies that power the cloud revolution and the tools to build the latest generations of container-based microservices applications, software-based storage technologies, and big data solutions.
+
+Unix:
+-----
+Linux
+HP UX
+IBM AIX
+MacOS
+Solaris
+
+Linux:
+------
+Redhat
+CentOS
+Ubuntu
+Fedora
+SUSE
+
+System Architecture
+--------------------
+The components of the architecture are:
+	Kernel: Kernel is the resource manager of the operating system. It is responsible for sharing system resources between multiple processes that are running in the system.
+	Shell: Shell is the interface between the user and the kernel. Unix offers many different types of shells like bourne shell, bourne again shell, C shell, T shell, K Shell, etc.,
+	Utilities: Users communicate to the kernel through the shell using the utilities. Unix provides many in-built utilities, and it is easier for users to create a utility by combining the existing ones.
+
+Basics:
+-------
+Commands that are entered at the shell prompt have three basic parts:
+
+Command to run.
+
+Options to adjust the behavior of the command.
+
+Arguments, which are typically targets of the command.
+For example, in the usermod -L user01
+
+usermod is the command, -L is the option, and user01 is the argument. 
+
+The File-system Hierarchy
+-------------------------
+The Linux system stores all files on file systems, which are organized into a single inverted tree known as a file-system hierarchy. This hierarchy is an inverted tree because the tree root is at the top, and the branches of directories and subdirectories stretch below the root.
+
 
