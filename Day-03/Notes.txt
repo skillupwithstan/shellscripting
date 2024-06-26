@@ -1,0 +1,56 @@
+Display the Command History
+****************************
+The history command displays a list of previously executed commands that are prefixed with a command number.
+
+The exclamation point character (!) is a metacharacter to expand previous commands without retyping them. 
+
+The !number command expands to the command that matches the specified number. 
+
+The !string command expands to the most recent command that begins with the specified string.
+
+[user@host ~]$ history
+...output omitted...
+   23  clear
+   24  who
+   25  pwd
+   26  ls /etc
+   27  history
+
+[user@host ~]$ !ls
+
+[user@host ~]$ !26
+
+Absolute Paths and Relative Paths
+*********************************
+An absolute path is a fully qualified name that specifies the exact location of the file in the file-system hierarchy. 
+It begins at the root (/) directory and includes each subdirectory that must be traversed to reach the specific file. 
+
+Every file in a file system has a unique absolute path name, which is recognized with a simple rule: a path name with a forward slash (/) as the first character is an absolute path name.
+
+For example, the absolute path name for the system message log file is /var/log/messages.
+
+A relative path identifies a unique location and specifies only the necessary path to reach the location from the working directory. Relative path names follow this rule: a path name with anything other than a forward slash as the first character is a relative path name. 
+
+For example, relative to the /var directory, the message log file is log/messages.
+
+Basic Commands:
+***************
+
+# Displays the full path name of the current working directory
+pwd
+
+# Lists directory contents for the specified directory or, if no directory is given, for the current working directory.
+ls
+ls –l      # long listing format
+ls –a     # all files, including hidden files
+ls –R     # recursive, to include the contents of all subdirectories
+
+
+# To change your shell's current working directory. If you do not specify any arguments to the command, then it changes to your home directory.
+cd  /etc
+
+# To move up one level to the parent directory, without needing to know the exact parent name.
+cd ..
+
+# To create a file & updates the time stamp of a file to the current date and time.
+touch /tmp/test.txt
