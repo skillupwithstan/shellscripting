@@ -1,0 +1,78 @@
+Command-line file management
+****************************
+# Create Directories
+
+The mkdir command creates one or more directories or subdirectories. It takes as an argument a list of paths to the directories that you want to create.
+
+       mkdir Project
+
+# Copy Files and Directories
+
+The cp command copies a file and creates a file either in the current directory or in a different specified directory.
+
+       cp file1.txt /tmp/file2.txt
+# Move Files and Directories
+
+The mv command moves files from one location to another. The contents of the files that are moved remain unchanged.
+
+mv file1.txt /tmp
+mv file1.txt file2.txt
+
+# Remove Files and Directories
+
+The rm command removes files. By default, rm does not remove directories. 
+
+We can use the rm command -r or the --recursive option to enable the rm command to remove directories and their contents. 
+
+The rm -r command traverses each subdirectory first, and individually removes their files before removing each directory.
+
+Examples:
+
+rm –r file1.txt                                                            
+rm –f file1.txt                                                             
+rm –i file1.txt
+
+rmdir command to remove empty directories. Use the rm command -r option to remove non-empty directories
+
+Make Links Between Files
+************************
+
+Links: Create multiple file names that point to the same file.
+
+Two types of links: a hard link, or a symbolic link (sometimes called a soft link). Each way has its advantages and disadvantages.
+
+Hard Links:
+Every file starts with a single hard link, from its initial name to the data on the file system. When we create a hard link to a file, we create another name that points to that same data. 
+The new hard link acts exactly like the original file name. After the link is created, we cannot tell the difference between the new hard link and the original name of the file.
+
+We can determine whether a file has multiple hard links by using the ls -l command. One item that it reports is each file's link count, the number of hard links that the file has. 
+
+ls -l file1.txt
+-rw-r--r--. 1 user user 0 Mar 11 19:19 file1.txt
+
+Limitations of Hard Links:
+--------------------------
+* We can use hard links only with regular files and cannot use the ln command to create a hard link to a directory or special file.
+
+* We can use hard links only if both files are on the same file system. The file-system hierarchy can be composed of multiple storage devices. Depending on the configuration of your system, when we change into a new directory, that directory and its contents might be stored on a different file system.
+
+Note:- We can use the df command to list the directories that are on different file systems.
+
+Symbolic Links:
+**************
+The ln command -s option creates a symbolic link, which is also called a "soft link". A symbolic link is not a regular file, but a special type of file that points to an existing file or directory.
+
+Symbolic links have some advantages over hard links:
+
+* Symbolic links can link two files on different file systems.
+* Symbolic links can point to a directory or special file, not just to a regular file.
+
+ln -s /home/user/newfile.txt /tmp/newfile-symlink.txt
+ls -l newfile.txt /tmp/newfile-symlink.txt
+-rw-rw-r--. 1 user user 12 Mar 11 19:19 newfile.txt
+
+Linux commands take the input from Keyboard and display their output on the terminal. If the command results in error, then the error is also displayed on the terminal. These a called as standard streams in LINUX.
+
+Input redirection operator(<) or (0<)
+Output redirection operator(>) or (1>)
+Error redirection operator(2>)
