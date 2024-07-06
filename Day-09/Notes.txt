@@ -1,1 +1,38 @@
+#User_Management.sh
+echo "************************************"
+echo "This is an example of case statement"
+echo "************************************"
 
+action=$1
+user=$2
+
+if [[ ($action != "") && ($user != "") ]]
+then
+  echo "The entered Action is: $action"
+  echo "The entered Username is: $user"
+  case $action in
+    ADD)
+      if [[ `cat /etc/passwd | grep $user | wc -l` == "0" ]]
+      then
+        useradd $user
+        echo "User - $user Added Successfully!"
+      else
+         echo "User - $user Already Exists."
+      fi
+      ;;
+    REMOVE)
+       if [[ `cat /etc/passwd | grep $user | wc -l` != "0" ]]
+       then
+         userdel $user
+         echo "User - $user Removed Successfully!"
+       else
+         echo "User - $user Doesn't Exists."
+       fi
+      ;;
+    *)
+       echo "Please enter the valid Action!"
+      ;;
+    esac
+else
+echo "Please enter the valid Action and/or Username"
+fi
