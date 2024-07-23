@@ -1,1 +1,50 @@
+Command substitution:
+---------------------
+who | wc –l                       or                w|wc -l
 
+users=`who | wc -l`        
+
+echo $users
+
+Exit status:
+------------
+Exit status is a numerical value returned by a command once its execution gets over. $? is the variable that is used to retrieve the exit status of the previous command that was executed. Any scripts or command line programs must terminate with a proper exit status.
+
+The Linux shell returns an exit code for each command line program or script executed. It returns zero for a successful operation and a non-zero value ranging from 1 to 255 for a non-successful operation. 
+
+pwd
+echo $?
+cat file3; echoe "Wrong command"
+echo $?
+
+The exit status of the previous command is non-zero. It was unsuccessful.
+
+Bash comparison operators:
+
+Integer comparison operators:
+-eq, -ne, -gt, -ge, -lt, -le
+
+String comparison operators:
+==, !=, -n, -z
+
+File operators:
+
+Like comparison of integers and strings can be evaluated, the status of any file or directory can also be evaluated in if statements.
+-a, -f, -d, -r, -w, -x, -s
+
+test command: It is used to evaluate comparison expressions. 
+
+[root@machine1 /]# num=10
+[root@machine1 /]# test $num -gt 10
+[root@machine1 /]# echo $?
+[root@machine1 /]# test $num -eq 10
+[root@machine1 /]# echo $?
+
+Selection constructs
+--------------------
+
+The flow of the execution of script is always sequential. But if we want to change the flow of the execution based on a condition, we can make use of selection constructs. 
+
+if statement
+if..else statement
+Nested if statement
