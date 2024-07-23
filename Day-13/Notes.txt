@@ -1,0 +1,99 @@
+Database Integration:
+---------------------
+
+To integrate a database and perform a query statement using shell scripting, we would typically use a command-line database client.
+
+#!/bin/bash
+
+# Database credentials
+user="username"
+password="password"
+host="localhost"
+db_name="database_name"
+
+# MySQL command
+mysql_cmd="mysql -u $user -p$password -h $host -D $db_name"
+
+# MySQL query
+query="SELECT * FROM table_name"
+
+# Execute the command
+echo $query | $mysql_cmd 
+
+API INTEGRATION
+---------------
+
+What is API?
+
+An Application Programming Interface (API) is a way for two or more computer programs to communicate with each other. 
+It is a type of software interface, offering a service to other pieces of software. 
+A document or standard that describes how to build or use such a connection or interface is called an API specification.
+
+There are two types of web services used mostly.
+
+SOAP – Simple Object Access Protocol is a protocol designed to exchange data with the security of programs that are built on different platforms or using different programming languages.
+
+REST - Representational State Transfer is an API that follows a set of rules through which applications and servers communicate. It was specifically designed for working with components like files, objects, and media components. 
+
+Methods:
+--------
+GET
+POST
+PUT
+PATCH
+DELETE
+
+CURL COMMAND:
+------------
+
+curl is a command-line tool used to transfer data to or from a server. It supports a wide range of protocols, including HTTP, HTTPS, FTP, SFTP, SCP, and many more.
+
+With curl, you can make requests to servers, submit form data, upload files, and download files. It's commonly used for interacting with REST APIs, testing server responses, and automating data transfer processes.
+
+Basic Authentication: This is where we provide a username and password which is base64 encoded.
+
+curl -u username:password http://example.com
+
+Important Options:
+
+-s, --silent: Silent mode. Don't output anything.
+-u, --user <user:password>: Set server login details.
+-v, --verbose: Make the operation more talkative.
+-X, --request <command>: Specify a custom request method to use.
+
+Example - 1:
+------------
+#!/bin/bash
+
+# API URL
+api_url="https://reqres.in/api/users?page=2"
+
+# Send GET request
+response=$(curl -s $api_url)
+
+# Parse the response and extract email and first name
+emails=$(echo $response | jq -r '.data[].email')
+first_names=$(echo $response | jq -r '.data[].first_name')
+
+# Print the emails and first names
+echo "Emails: $emails"
+echo "First Names: $first_names"
+
+Example - 2:
+------------
+
+#!/bin/bash
+
+# API URL
+api_url="https://reqres.in/api/users"
+
+# Data
+data="{"name":"John","job":"Developer"}"
+
+# Send POST request
+response=$(curl -s -X POST -d $data $api_url)
+
+# Print the response
+echo $response
+
+
