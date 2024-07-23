@@ -1,0 +1,26 @@
+function:
+----------
+A function is a collection of statements that execute a specified task. Its main goal is to break down a complicated procedure into simpler subroutines that can subsequently be used to accomplish the more complex routine. 
+
+For the following reasons, functions are popular:
+
+- Assist with code reuse.
+- Enhance the program’s readability.
+- Modularize the software.
+- Allow for easy maintenance.
+
+#!/bin/bash
+# Define a function
+
+add_numbers() 
+{   
+ echo $(($1 + $2))
+}
+
+# Call the function
+add_numbers 5 10
+
+Regular expression
+-------------------
+
+https://docs.linuxfoundation.org/v2/security-service/manage-false-positives/regular-expressions-cheat-sheet
