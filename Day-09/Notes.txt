@@ -1,3 +1,113 @@
+
+if statement:
+
+Syntax:
+
+if [ test expression ]
+then
+  block of commands
+fi
+
+Example:
+#!/bin/bash
+filename=/tmp/sample.txt
+if [ -f $filename ]
+then 
+  echo  “file1 is a regular file.”
+fi
+
+if..else statement
+------------------
+Syntax:
+
+if [ test expression ]
+then
+	block of commands
+else
+	block of commands
+fi
+
+Example:
+--------
+#!/bin/bash
+filename=/tmp/sample.txt
+if [ -f $filename ]
+then 
+  echo “$filename is a regular file.”
+else
+  echo "$filename is not a regular file."
+fi
+
+if ..elif..else statement:
+--------------------------
+Syntax:
+
+if [ test expression ]
+then
+	block of commands
+elif [ test expression ]
+then
+	block of commands
+.
+.
+else
+	block of commands
+fi
+
+Example:
+------
+
+#!/bin/bash
+filename=/tmp
+if [ -f $filename ]
+then 
+  echo “$filename is a regular file.”
+elif [ -d $filename ]
+then
+  echo "$filename is a directory."
+else
+  echo "$filename is neither a regular file nor a directory."
+fi
+
+Case statement:
+--------------
+Syntax:
+
+case <val> in
+choice1) <block of commands>;;
+choice2) <bloc of commands>;;
+.
+.
+*) <block of commands>;;
+esac
+
+Example - 1:
+------------
+
+#!/bin/bash
+string=“chennai"
+test $string == “Chennai"
+case $? in
+0) echo "The condition is true";;
+1) echo "The condition is false";;
+*) echo "Unknown exit status";;
+esac
+echo "Out of the case statement"
+
+Example - 2:
+------------
+
+#!/bin/bash
+num=100
+case $num in
+0) echo "The number is zero";;
+10) echo "The number is ten";;
+100) echo "The number is hundred";;
+*) echo "No match is found"
+esac
+echo "Out of the case statement"
+
+
 #User_Management.sh
 echo "************************************"
 echo "This is an example of case statement"
