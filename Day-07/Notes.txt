@@ -1,1 +1,61 @@
+Shell Variables:
+-----------------
+A variable is a string of characters to which a value can be assigned. In Linux, once a value is assigned to a variable, the variable can be accessed by prefixing the variable name with a “$”. 
 
+Linux follows the below naming convention for shell variables.
+
+Variable names must be all in upper case.
+
+2. Variable names cannot start with a number (0-9).
+
+3. Variable name can contain alphabets(a-z, A-Z), numbers(0-9) and the special character, "_".
+
+Some examples of valid variable names are, APPNAME, USER1, Admin_1, _day, etc.,
+
+Some examples of invalid variable names are 1APP, 1-user, !ADMIN, etc.,
+
+[root@machine1 /]$ track=Wintel
+[root@machine1 /]$ echo $track
+Wintel
+[root@machine1 /]$ echo track
+track
+[root@machine1 /]$ track=Linux
+[root@machine1 /]$ echo $track
+Linux
+[root@machine1 /]$ unset track
+[root@machine1 /]$ echo $track
+[root@machine1 /]$ readonly stream=linux
+[root@machine1 /]$ echo $stream
+linux
+[root@machine1 /]$ stream=windows
+/bin/bash: stream: This variable is read only.
+
+
+Special variables
+-----------------
+
+In Linux, there are special variables which are reserved for specific functions. 
+Each of them hold a special value in Linux. 
+These special variables cannot be assigned with any user-defined values. 
+These special variables can be used with commands as well as scripts. 
+The following table shows the special variables in Unix and their functions. 
+
+$?, $0, $#, $*, $@, $$
+
+Command line arguments:
+-----------------------
+One of the simple yet useful way of supplying parameters to a Linux shell script is by passing them as command line arguments. 
+
+These parameters can be text, number, filename or any data. Any number of parameters can be supplied to a Linux shell script.
+
+$0 is a special positional parameter which holds the name of the script/program that is being executed.
+
+[root@machine1 /]# cat script.sh
+#!/bin/bash
+echo "The name of the script is $0"
+echo "The first argument is $1"
+echo "The second argument is $2"
+echo "The third argument is $3"
+echo "The total number of arguments are $#"
+echo "The arguments are $@"
+echo "The arguments are $*"
